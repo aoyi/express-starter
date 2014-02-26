@@ -15,9 +15,10 @@ $('#reappear').click(function() {
     $('#houdini_text').show();
 });
 
-$('#tickle me pink').click(function() {
+$('#tickle_me_pink').click(function() {
 	$('#tickled_text').css('color','pink');
 });
 
-// Problem 4 (Greet Me) -----------------------------------------------------
-// WRITE CODE HERE
+$('#greet_me').click(function() {
+	alert("Hey, " + $('#my_name').val());
+})
