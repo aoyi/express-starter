@@ -20,5 +20,5 @@ $('#tickle_me_pink').click(function() {
 });
 
 $('#greet_me').click(function() {
-	alert("Hey, " + $('#my_name').val());
+	alert("Hello, " + $('#my_name').val());
 })
