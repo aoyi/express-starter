@@ -79,6 +79,27 @@ $('#p7').click(function() {
 }
   });
 
+$('#p11').click(function() {
+  	context.strokeStyle = 'pink';
+  	for (var i = 0; i < 100; i++) {
+  	  for (var j = 0; j < 100; j++) {
+       context.strokeRect(5*i, 5*j , 5, 5) ;
+		}
+	}
+  });
+
+$('#p12').click(function() {
+ 	
+ 	for (var i = 0; i < 20; i++) {
+ 	
+ 	context.beginPath();
+    context.arc(200,300,5*i,0,2*Math.PI);
+    context.closePath();
+    context.strokeStyle = 'red';
+    context.stroke();
+		}	
+  });
+
 
   //--------------------------------------------------------------------------
   //Write your code for p1-p12 here
