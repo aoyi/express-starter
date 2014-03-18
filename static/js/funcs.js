@@ -90,37 +90,37 @@ $(document).ready(function() {
   $('#p5').click(function() {
     drawCircle(250,350,50,'blue');
     drawSquare(200,300,100,'red');
-    drawCircle(300,350,50,'green');
-    drawCircle(200,350,50,'green');
-    drawCircle(250,400,50,'green');
-    drawCircle(250,300,50,'green');
+    drawCircle(300,350,50,'yellow');
+    drawCircle(200,350,50,'yellow');
+    drawCircle(250,400,50,'pink');
+    drawCircle(250,300,50,'pink');
   });
 
   $('#p6').click(function() {
-    drawTriplet(150,300,30,'green');
+    drawTriplet(200,300,30,'green');
   });
 
   $('#p7').click(function() {
-    drawTriplet(450,200,30,'blue');
+    drawTriplet(100,200,30,'blue');
   })
 
   $('#p8').click(function() {
     drawTriplet(100,200,30,'red');
     drawTriplet(200,200,30,'yellow');
-    drawTriplet(100,300,30,'black');  
+    drawTriplet(100,300,30,'purple');  
     drawTriplet(200,300,30,'pink');
   })
 
   $('#p9').click(function() {
-    drawTriangle(150,200,20,'black');
+    drawTriangle(150,100,20,'pink');
   })
 
   $('#p10').click(function() {
-    drawTriforce(350,200,'black');
+    drawTriforce(350,200,'yellow');
   })
 
   $('#p11').click(function() {
-    drawTripleTriforce(350,300,'black');
+    drawTripleTriforce(350,300,'purple');
   })
 
   $('#p12').click(function() {
