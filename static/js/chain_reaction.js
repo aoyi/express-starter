@@ -38,6 +38,13 @@ $(document).ready(function() {
     };
 
     for (var i = 0; i < reactions.length; i++) {
+     
+      if ( reactions[i].radius < 30 ) {
+          reactions[i].radius = reactions[i].radius + 1;
+          }
+    };
+
+    for (var i = 0; i < reactions.length; i++) {
 
     context.beginPath();
     context.arc(reactions[i].xCoor,reactions[i].yCoor, reactions[i].radius ,0,2*Math.PI);
@@ -80,7 +87,7 @@ $(document).ready(function() {
     var reaction_object = {
     xCoor: x,
     yCoor: y,
-    radius: 30
+    radius: 1
   };
     reactions.push(reaction_object);
   });
