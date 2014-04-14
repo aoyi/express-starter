@@ -10,6 +10,7 @@ $(document).ready(function() {
   var balls = [];
 
   for (var i = 0; i < numBalls; i++) {
+
     var ball_i = {
     xCoor: width * Math.random(),
     yCoor: height * Math.random(),
@@ -18,7 +19,7 @@ $(document).ready(function() {
     vy: 15 * Math.random()
   };
     balls.push(ball_i); 
-}
+  };
 
   var updateGame = function() {
 
@@ -58,12 +59,20 @@ $(document).ready(function() {
   };
   };
 
-  // Handle a canvas click event
+  
   $('#game_canvas').click(function(e) {
-    // Find the mouse x and y relative to the top-left corner of the canvas
+    
     var x = e.pageX - $(this).offset().left;
     var y = e.pageY - $(this).offset().top;
-    // PUT STUFF HERE
+
+    var ball_new = {
+    xCoor: x,
+    yCoor: y,
+    radius: 20,
+    vx: 20 * Math.random(),
+    vy: 15 * Math.random()
+  };
+    balls.push(ball_new);
   });
 
   updateGame();
