@@ -6,35 +6,19 @@ $(document).ready(function() {
   var height = canvas.height;
 
   // PUT STUFF HERE
-  var balls = []
-  var b0 = {
-    xCoor: 50,
-    yCoor: 250,
+  var numBalls = 10;
+  var balls = [];
+
+  for (var i = 0; i < numBalls; i++) {
+    var ball_i = {
+    xCoor: width * Math.random(),
+    yCoor: height * Math.random(),
     radius: 20,
-    vx: 5,
-    vy:5
+    vx: 20 * Math.random(),
+    vy: 15 * Math.random()
   };
-    var b1 = {
-    xCoor: 300,
-    yCoor: 400,
-    radius: 50,
-    vx: 5,
-    vy:5
-  };
-    var b2 = {
-    xCoor: 200,
-    yCoor: 90,
-    radius: 80,
-    vx: 5,
-    vy:5
-  };
-
-
-  balls.push(b0); 
-  balls.push(b1);
-  balls.push(b2);
-  // Run an interation of the game
-
+    balls.push(ball_i); 
+}
 
   var updateGame = function() {
 
@@ -50,7 +34,7 @@ $(document).ready(function() {
     context.closePath();
     context.stroke();
     };
-    setTimeout(updateGame,10);
+    requestAnimationFrame(updateGame);
 
     for (var i = 0; i < balls.length; i++) {
     var xx = function() {
