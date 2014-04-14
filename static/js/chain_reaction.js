@@ -6,6 +6,7 @@ $(document).ready(function() {
   var height = canvas.height;
 
   // PUT STUFF HERE
+  var reactions = [];
   var numBalls = 10;
   var balls = [];
 
@@ -14,7 +15,7 @@ $(document).ready(function() {
     var ball_i = {
     xCoor: width * Math.random(),
     yCoor: height * Math.random(),
-    radius: 20,
+    radius: 10,
     vx: 20 * Math.random(),
     vy: 15 * Math.random()
   };
@@ -30,11 +31,22 @@ $(document).ready(function() {
 
     context.beginPath();
     context.arc(balls[i].xCoor,balls[i].yCoor, balls[i].radius ,0,2*Math.PI);
+    context.fillStyle = 'blue';
+    context.fill();
+    context.closePath();
+    context.stroke();
+    };
+
+    for (var i = 0; i < reactions.length; i++) {
+
+    context.beginPath();
+    context.arc(reactions[i].xCoor,reactions[i].yCoor, reactions[i].radius ,0,2*Math.PI);
     context.fillStyle = 'pink';
     context.fill();
     context.closePath();
     context.stroke();
     };
+
     requestAnimationFrame(updateGame);
 
     for (var i = 0; i < balls.length; i++) {
@@ -65,14 +77,12 @@ $(document).ready(function() {
     var x = e.pageX - $(this).offset().left;
     var y = e.pageY - $(this).offset().top;
 
-    var ball_new = {
+    var reaction_object = {
     xCoor: x,
     yCoor: y,
-    radius: 20,
-    vx: 20 * Math.random(),
-    vy: 15 * Math.random()
+    radius: 30
   };
-    balls.push(ball_new);
+    reactions.push(reaction_object);
   });
 
   updateGame();
